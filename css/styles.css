@@ -278,7 +278,7 @@ nav h1 a {
 
 #restaurant-img {
   width: 100%;
-  min-width: 320px;
+  min-width: 100%;
   max-width: 620px;
   margin:auto;
 }
@@ -301,16 +301,15 @@ nav h1 a {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-  width: 100%;
-  min-width: 320px;
+  min-width: 100%;
   max-width: 620px;
 }
 
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 50px 40px 30px;
-  width: 65%;
+  padding: 50px 10px 30px;
+  width: 80%;
   max-width: 926px;
   text-align: center;
   display: flex;
@@ -325,7 +324,7 @@ nav h1 a {
   justify-content: center;
   text-align: center;
   background-color: #C0C0C0;
-  min-width: 320px;
+  min-width: 100%;
   max-width: 620px;
   margin: auto;
 }
@@ -360,8 +359,7 @@ nav h1 a {
   margin: 0 0 30px;
   overflow: hidden;
   padding: 0;
-  position: relative;
-  width: 85%;
+  width: 100%;
   text-align: left;
 
 }
@@ -402,7 +400,7 @@ nav h1 a {
   }
 
   #breadcrumb {
-    font-size: 25px;
+    font-size: large;
   }
 }
 

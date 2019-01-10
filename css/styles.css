@@ -129,7 +129,12 @@ nav h1 a {
   background-color: #ccc;
 }
 
+#map-container{
+  width:100%;
+}
+
 /* ====================== Restaurant Filtering ====================== */
+
 .filter-options {
   width: 90%;
   max-width: 1000px;

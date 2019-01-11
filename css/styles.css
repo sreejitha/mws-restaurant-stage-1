@@ -129,12 +129,11 @@ nav h1 a {
   background-color: #ccc;
 }
 
-#map-container{
-  width:100%;
+#map-container {
+  width: 100%;
 }
 
 /* ====================== Restaurant Filtering ====================== */
-
 .filter-options {
   width: 90%;
   max-width: 1000px;
@@ -148,11 +147,17 @@ nav h1 a {
 }
 
 .filter-options h2 {
-  color: white;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:0;
+  margin-bottom: 0;
+}
+
+.filter-options h2, label {
+  color: white;
 }
 
 .filter-options select {
@@ -193,7 +198,7 @@ nav h1 a {
   background-color: lightgrey;
   border: 2px solid #ccc;
   font-family: Arial, sans-serif;
-  margin-top: 0;
+  margin-top: 0px;
   margin-bottom: 20px;
   min-height: 380px;
   padding: 0 10px 25px;
@@ -229,7 +234,7 @@ nav h1 a {
 
 #restaurants-list li a {
   background-color: #3397DB;
-  border-bottom: 3px solid #eee;
+  border: none;
   color: #fff;
   display: inline-block;
   font-size: 10pt;
@@ -285,13 +290,13 @@ nav h1 a {
   width: 100%;
   min-width: 100%;
   max-width: 620px;
-  margin:auto;
+  margin: auto;
 }
 
 #restaurant-address {
   font-size: 15pt;
-  margin-top:10px;
-  width:90%;
+  margin-top: 10px;
+  width: 90%;
   font-family: 'Charm', cursive;
 }
 
@@ -333,6 +338,7 @@ nav h1 a {
   max-width: 620px;
   margin: auto;
 }
+
 /*
 #reviews-container {
   padding: 30px 40px 80px;
@@ -366,7 +372,6 @@ nav h1 a {
   padding: 0;
   width: 100%;
   text-align: left;
-
 }
 
 #reviews-list li p {
@@ -375,24 +380,26 @@ nav h1 a {
   padding-right: 10px;
 }
 
-#reviews-list li p:first-child{
-  width:100%;
+#reviews-list li p:first-child {
+  width: 100%;
   background-color: black;
   color: #fff;
-  margin-left:0px;
-  margin-right:0px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
+
 #restaurant-hours td {
   text-align: left;
   color: #666;
   font-family: 'Open Sans', sans-serif;
 }
 
-#rating{
+#rating {
   background-color: orange;
-  padding:5pt;
+  padding: 5pt;
 }
-@media screen and (min-width: 350px) and (max-width: 600px) {
+
+@media screen and (max-width: 600px) {
   #restaurants-list {
     justify-content: center;
     width: 90%;
@@ -409,15 +416,17 @@ nav h1 a {
   }
 }
 
-@media screen and (min-width: 350px) and (max-width: 650px) {
+@media screen and (max-width: 923px) {
   .filter-options {
     flex-direction: column;
+    margin-bottom: 10px;
   }
 
   .filter-options select {
     width: 65%;
   }
 }
+
 
 @media screen and (min-width: 600px) and (max-width: 850px) {
   #restaurants-list li {

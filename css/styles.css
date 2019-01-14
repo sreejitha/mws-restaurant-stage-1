@@ -68,7 +68,6 @@ nav {
   color: #aaa;
   font-size: 8pt;
   letter-spacing: 1px;
-  padding: 25px;
   text-align: center;
   text-transform: uppercase;
   width: 100%;
@@ -144,8 +143,8 @@ nav h1 {
   background-color: #ccc;
 }
 
-#map:focus{
-  outline:3px solid black;
+#map:focus {
+  outline: 3px solid black;
 }
 
 #map-container {
@@ -229,6 +228,7 @@ nav h1 {
   padding: 0 10px 25px;
   text-align: center;
   width: 30%;
+  min-width: 150px;
   height: 450px;
 }
 
@@ -269,12 +269,12 @@ nav h1 {
   text-transform: uppercase;
 }
 
-#restaurants-list li a:focus{
-  outline:3px solid black;
+#restaurants-list li a:focus {
+  outline: 3px solid black;
 }
+
 /* ====================== Restaurant Details ====================== */
 .inside header {
-  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -285,8 +285,7 @@ nav h1 {
 }
 
 .inside #map-container {
-  background: blue none repeat scroll 0 0;
-  height: 87%;
+  background: white none repeat scroll 0 0;
   right: 0;
   top: 80px;
   width: 100%;
@@ -343,7 +342,7 @@ nav h1 {
   max-width: 620px;
 }
 
-#restaurant-container, #reviews-container {
+  #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
   padding: 50px 40px 30px;
@@ -438,6 +437,7 @@ nav h1 {
     width: 70%;
     margin-left: 5%;
     margin-right: 5%;
+    padding:0;
   }
 
   #breadcrumb {
@@ -450,6 +450,23 @@ nav h1 {
     width: 35%;
     margin-left: 5%;
     margin-right: 5%;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  #restaurants-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+
+  #restaurants-list li {
+    width: 35%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 

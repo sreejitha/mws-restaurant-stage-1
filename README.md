@@ -1,33 +1,34 @@
-# Mobile Web Specialist Certification Course
----
-#### _Three Stage Course Material Project - Restaurant Reviews_
+## Restaurant Reviews Project
 
-## Project Overview: Stage 1
+This project attempts at creating a UI for searching and reading reviews of restaurants filtered by neighborhoods and cuisines.
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+## Pre-requisites
+1. Need to have python installed in the computer
 
-### Specification
-
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality.
-
-### Project Rubric
-
-Your project will be evaluated by a Udacity code reviewer according to the [Restaurant Reviews project rubric](https://review.udacity.com/#!/rubrics/1090/view). Please review for detailed project requirements. The rubric should be a resource you refer to periodically to make sure your project meets specifications.
-
-### What do I do from here?
-
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer.
-
-    * In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
+## Instructions to run the project
+1. Clone this repository into a folder say 'restrntRevs' and cd into that folder.
+2. In this folder, start up a simple HTTP server to serve up the site files on your local computer.
+(Below instruction has been borrowed from Udacity Instructor Notes)
+   * In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
    * Note -  For Windows systems, Python 3.x is installed as `python` by default. To start a Python 3.x server, you can simply enter `python -m http.server 8000`.
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
 
-## Leaflet.js and Mapbox:
 
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information.
-
-### Note about ES6
-
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future-proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write.
+## About the solution
+1. My contribution in this project has mainly been with the css (for responsiveness and accessibility) and adding of the service worker to enable assets to be available offline.
+2. The starter kit had much of the javascript ready to use taking care of event handling, data population for select drop-downs, results served from database requests. The only changes I made in javascript were to:-
+   1. add aria attributes and roles to html elements for enhancing accessibility
+   2. register the service worker on DOMContentLoaded event
+3. Notes on changes to CSS/HTML:-
+   1. Used flexbox to serve restaurant list on index.html for smaller viewports and css grid for larger
+   vieports
+   2. Used some google fonts to enhance design linked the appropriate css in the html page
+   3. added styles for hover and focus for accessibility
+   4. modified html to use semantic elements such as sections
+4. Service worker
+   (A lot of this code should be credited to Instructor lessons and Udacity and
+    https://developers.google.com/web/fundamentals/primers/service-workers/)
+   1. On DOMContentLoaded: Attempts to  register
+   2. On self install: Attempts to cache all the assets of the website into a cache named
+   'restrnt-assets-cache-v1'
+   3. On self activation: Deletes the previous cache
+   4. On Fetch: Attempts to serve assets from cache. On failure fetches assets from the network

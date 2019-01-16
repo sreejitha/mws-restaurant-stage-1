@@ -196,7 +196,6 @@ createRestaurantHTML = (restaurant) => {
   more.setAttribute('role', 'button');
   more.setAttribute('aria-label', 'View ' + restaurant.name + ' Restaurant Details');
   li.append(more);
-
   return li
 }
 

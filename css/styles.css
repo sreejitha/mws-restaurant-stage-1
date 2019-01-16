@@ -85,6 +85,7 @@ nav h1 {
   margin: auto;
 }
 
+/*title of the page with is an anchor tag */
 #headLink {
   color: #fff;
   font-size: 14pt;
@@ -93,10 +94,12 @@ nav h1 {
   letter-spacing: 5px;
 }
 
+/*to highligh element on focus for accessibility*/
 #headLink:hover, #headLink:focus {
   outline: 3px solid white;
 }
 
+/*used in restaurant.html to navigate back to home page*/
 #breadcrumb {
   padding: 10px 10px 16px;
   list-style: none;
@@ -158,6 +161,7 @@ nav h1 {
 }
 
 /* ====================== Restaurant Filtering ====================== */
+/*blue div holding the filter select options by location and cuisine */
 .filter-options {
   width: 90%;
   max-width: 1000px;
@@ -203,6 +207,7 @@ nav h1 {
   justify-content: center;
 }
 
+/*using flexbox for smaller viewports, css grid for larger viewports*/
 #restaurants-list {
   background-color: #f3f3f3;
   list-style: outside none none;
@@ -273,7 +278,7 @@ nav h1 {
   outline: 3px solid black;
 }
 
-/* ====================== Restaurant Details ====================== */
+/* ====================== Restaurant Details <restaurants.html>====================== */
 .inside header {
   top: 0;
   width: 100%;
@@ -403,6 +408,7 @@ nav h1 {
   padding-right: 10px;
 }
 
+/*Styling for the name of the reviewer in reviews list*/
 #reviews-list li p:first-child {
   width: 100%;
   background-color: black;
@@ -447,7 +453,7 @@ nav h1 {
     margin-right: 5%;
   }
 }
-
+/*using css grid for restaurant list when viewport is large*/
 @media screen and (min-width: 750px) {
   #restaurants-list {
     display: grid;

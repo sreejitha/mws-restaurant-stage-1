@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 registerServiceWorker = () => {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/serviceworker.js', {
+      navigator.serviceWorker.register('/service-worker.js', {
     scope: '/'}).then(function() {
         console.log('service worker registered!');
       }).catch(function() {
@@ -178,7 +178,7 @@ createRestaurantHTML = (restaurant) => {
   image.alt = restaurant.name + " restaurant image"
   li.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h3');
   name.innerHTML = restaurant.name;
   li.append(name);
 
